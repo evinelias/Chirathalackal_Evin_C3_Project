@@ -1,4 +1,3 @@
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +32,7 @@ public class Restaurant {
 
     public List<Item> getMenu() {
         return menu;
+        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 
     private Item findItemByName(String itemName){
@@ -70,11 +70,10 @@ public class Restaurant {
     }
     public int getTotalCost(List<String> selectedItems) {
         int totalcost = 0;
-        // for (String itemname : selectedItems) {
-        //     totalcost = totalcost + findItemByName(itemname).getPrice();
-        // }
+        for (String itemname : selectedItems) {
+            totalcost = totalcost + findItemByName(itemname).getPrice();
+        }
         return totalcost;
 
     }
-
 }
